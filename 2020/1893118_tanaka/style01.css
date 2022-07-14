@@ -1,0 +1,30 @@
+@charset "utf-8";
+{box-sizing:
+  border-box;
+}
+h2{border-left:solid
+1em #00F;
+border-bottom:solid 3px #00F;
+}
+.container
+{width:90%;
+margin: 0 auto;
+}
+h1{margin:1em;
+padding:1em;
+font-size:1.5em;
+background-color:skyblue
+}
+h2
+{font-size:1.2em;
+padding: 10px;
+border-left:solid
+1em
+boder-bottom:solid
+3px
+border-color:rose;
+}
+
+img.X
+{width: 49%
+}

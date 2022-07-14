@@ -1,0 +1,68 @@
+@charset "utf-8";
+body{
+    background-color: cornsilk
+}
+h1{
+    font-size:3em;
+    color: red;
+    border: solid 10px yellow;
+    text-align: center;
+    
+        
+}
+h2{
+    background-color: yellow;
+    margin-right: 35em;
+    margin-top: 3em;
+    font-size: ; 
+}
+.content{
+    font-size:2em;
+     text-decoration: underline;
+}
+h3{
+    background-color: coral;
+    margin-top: 3em;
+    margin-right: 20em;
+    font-size: 20px;
+    clear: both;
+    
+    
+}
+p{
+    line-height: 1.5;
+    letter-spacing: 0.05;
+     text-decoration: underline;
+} 
+
+ul{
+    line-height: 1.5;
+    letter-spacing: 0.05;
+  text-decoration: underline;
+} 
+.pic{
+    width: 50%;
+    float: left;
+    margin-right: 1em;
+    
+}
+.meat{
+    width: 30%;
+    float: left;
+    margin-right: 1em;
+}
+.info{
+    clear: both;
+    overflow: hidden;
+    margin: 1em;
+    
+}
+
+@media(min-width: 960px){
+    .pic{
+        width: %;
+    }
+    .meat{
+        width: 20%;
+    }
+}

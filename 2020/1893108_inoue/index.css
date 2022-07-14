@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;/* コンテナの幅をウィンドウの90%にする*/
+    margin: 0 auto;/* 左右外余白をautoにする*/
+}
+
+header{
+    padding:2em 0;
+}
+header img {
+    width: 100%;/* ■■ ヘッダーの画像を親の幅100%にする*/
+}
+
+nav.menu_flex { /*メニューを最上部に固定*/
+/*
+    position: fixed;
+    width: 90%;
+    top: 0;
+*/
+}
+nav.menu_flex ul {
+   display: flex; /* ■■ メニュー全体をflex対応にする（箇条書きの外枠）*/
+}
+nav.menu_flex ul li {
+   flex: 1; /* ■■ 各メニューを1対1対1...にする（箇条書きのアイテム）*/
+}
+
+nav.menu_flex ul li a { /*メニューアイテムの設定*/
+/*    background-color: white;*/
+    color: gray;
+    display: block; /* 文字以外の場所もクリック可能にする*/
+    text-align: center; /* 文字を中央にする */
+    height: 2em;
+    line-height: 2em;
+    text-decoration: none; /* 下線を消す */
+
+    border-left: 0.1em gray solid/* ■■ 各メニューの左にボーダーライン*/
+}
+nav.menu_flex ul li:last-child a{
+    border-right: 0.1em gray solid/* ■■ 最後のメニューの右にボーダーライン*/
+}
+
+h2 {
+    margin: 1em 0;
+    padding: 0.3em 1em;
+    font-size: 1.2em;
+    border-left: 1em solid  #ff7f50;
+    border-bottom: 3px solid  #ff7f50;
+}
+
+.petInfo{
+   clear: both;/* ■■ floatをキャンセル*/
+    overflow: hidden;/* ■■ コンテンツの高さがおかしい時の処理 */
+    background-color: navajowhite;
+    padding: 1em;
+    margin: 1em 0;
+   position: relative ;/* ■■ おすすめを配置する際のベースposition決定 */
+}
+
+.petInfo img{
+    float: left;/* ■■ 左よせ*/
+    padding: 0 1em;
+    border-radius: 50%;
+}
+.recommend {
+ position: absolute; /* ■■ 親要素の位置からの絶対位置position*/
+  top: 5px;/* ■■ 上から5pxの位置*/
+  right: 5px;/* ■■ 右から5pxの位置*/
+  padding: 0.5em;
+  background-color: #FF0;
+}
+
+footer {
+  clear: both;/* ■■ floatをキャンセル*/
+  background-color: #ff7f50;
+  line-height: 2em;
+  text-align: center;
+  color: #FFF;
+}
+
+.syo img.wideimage{
+    width: 100%;
+}
+
+.syo img.syo1{
+    width: 20%;
+    float: left;
+    margin-right: 1em;
+    
+}
+
+.syo{
+    clear: both;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.name{
+    font-size: 1.5em
+}
+
+.syo2 img.syo3{
+    width: 30%;
+    float: left;
+    margin-right: 1em;
+/*    overflow: hidden*/
+}
+
+.syo img.syo4{
+      width: 30%;
+    float: inherit;
+    margin-right: 1em;
+}
+
+
+.syo .right{
+   
+    width: 78%;
+    float: left;
+}
+.syo2{
+    margin-top: 5em;
+    overflow: hidden;
+}

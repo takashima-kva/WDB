@@ -1,0 +1,119 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box; /* 全要素をborder-boxにする */
+}
+html {
+    font-size: 62.5%;  /* 1em（1rem）を10pxにするための準備 */
+}
+body {
+    font-size: 1.6rem;  /* 16pxをデフォルトのフォントサイズにする */
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background: url(images/bottle-2032980_1920.html) no-repeat center center fixed; /*背景を固定*/
+    background-size: cover; /*背景画像の縦横いずれかをウィンドウに合わせる*/
+}
+
+
+header {
+    padding: 20rem 5rem; /*背景を見せるための余白設定*/
+}
+.title {
+    font-size: 20rem;
+    font-family: 'Galada', sans-serif;
+    color: powderblue; 
+}
+ {
+  margin:0; padding:0;
+}
+header {
+  height: 100px;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #F0F8FF;
+  color: black;
+}
+header .headline{
+    line-height: 100px;
+    float: left;
+    font-size: 30px;
+    margin-left: 100px;
+}
+.nav-list {
+    line-height: 100px;
+    float: left;
+    margin-left: 30px;
+    list-style: none;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.content {
+    padding: 10rem 0;
+    font-size: 1.6rem;
+}
+.heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.description {
+    margin: 0 2rem;
+    line-height: 3rem;
+}
+#about,#mineralwater {
+    background-color: skyblue;
+}
+#hardsoft{
+    background-color:powderblue
+}
+#pets {
+    background-color: rgba(50,50,50,0.5); /*背景を見せるための半透明化（opacityだと前景も透ける）*/
+    color: white;
+}
+.pet-flex-container {
+    display: flex;
+}
+.pet-flex-item {
+    flex: 1;
+    margin: 1rem;
+    border: solid thin white;
+    border-radius: 2rem;
+    background-color: white;
+}
+.pet-flex-item img { 
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;  /*ペット画像の上部を角丸に*/
+}
+.petInfo {
+    padding: 1rem;
+    color: black;
+}
+
+@media (max-width:600px) {
+body { /*背景のcover、fixedがスマホでは見られない場合の対応*/
+    background: none
+}
+body::before {/*背景のcover、fixedがスマホでは見られない場合の対応*/
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url(images/bottle-2032980_1920.html) center/cover no-repeat;
+    background-size: cover;
+}
+.title {
+    font-size: 10rem;
+}
+
+.heading {
+    font-size: 2rem;
+}
+.pet-flex-container { /*ペットの並びをたてにする*/
+    flex-direction: column;
+}
+}

@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+.title{
+    font-size: 5em;
+    font-family: 'Fondamento', cursive;
+    text-align: center;
+    color:#99CCFF ;
+/*    margin: */
+    
+}
+
+.menu-kosui{
+    font-size:2em;
+/*    float: left;*/
+    font-family: 'Fondamento', cursive;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+nav.menu-kosui ul{
+   display: flex;
+    flex-direction:column;
+    text-align: center;
+    list-style: none
+    
+}
+.kosui1{
+    padding: 1em;
+    line-height: 2em;
+}
+nav.menu-kosui ul li{
+text-align: center;
+border:dotted 0px #77a7d1;
+-moz-border-radius: 51px;
+-webkit-border-radius: 51px;
+border-radius: 51px;
+    background-color: rgba(0, 33, 63, 0.2);
+background: rgba(0, 33, 63, 0.2);
+color: rgba(0, 33, 63, 0.2);
+margin: 10px;
+    height: auto;
+    width: auto;
+}
+a:link { color:#0099; }
+a:visited { color:#CCCCFF; }
+a:hover { color:#7B68EE; }
+a:active { color:#000099; }
+
+.content{
+    overflow: hidden;
+    clear: both;
+/*    text-align: center;*/
+    font-size: 20px
+    
+        }
+a:link { color:#0099; }
+a:visited { color:#5507FF; }
+a:hover { color:#7B68EE; }
+a:active { color:#000099; }
+
+.sabu{
+    text-align: center;
+    font-weight:500;
+    font-size: 25px;
+    line-height:60px;
+    color: #111111;
+}
+.img{
+    width: 100%;
+    text-align: center;
+}
+.img img{
+    width:50%;   
+/*    margin: 0 auto;*/
+}
+
+.line{
+    text-decoration: underline
+}
+p{
+padding:2px;
+/*font-size: 20px;*/
+margin: 1em;
+    color: #111111;
+}
+
+.heading{
+border:dotted 0px #77a7d1;
+-moz-border-radius: 51px;
+-webkit-border-radius: 51px;
+border-radius: 51px;
+    background-color: rgba(0, 33, 63, 0.2);
+background: rgba(0, 33, 63, 0.2);
+color: rgba(0, 33, 63, 0.2);
+    margin: 1em;
+    color:#000099;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em
+}
+
+.container{
+width: 70%;
+margin: 0 auto;
+background-color:white;    
+}
+body{
+    background-color:#99CCFF ;
+    
+}
+
+.top{
+    text-align: center;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.topbotan{
+    font-size: 1em
+}
+
+footer{
+    text-align: center;
+   
+   
+}
+
+@media(max-width:600px){
+.container{ width: 80%;
+margin: 0 auto;
+    background-color:white;}
+}
+ @media(max-width:600px){
+.menu-kosui{
+    font-size:3em;
+/*    float: left;*/
+    font-family: 'Fondamento', cursive;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+ 
+    
+}
+}

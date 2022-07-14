@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ミネラルウォーター飲み比べ</title>
+    <link rel="stylesheet" href="css/html5-doctor-reset-stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../../../../ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('a[href^="#"]').click(function() {
+          var speed = 300; 
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+    </head>
+
+    <body>
+<header>
+  	<h1 class="headline">
+      <a>水</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a href="#">HOME</a>
+      </li>
+        <li class="nav-list-item"><a href="#about">水について</a></li>
+        <li class="nav-list-item"><a href="#hardsoft">硬水・軟水</a></li>
+        <li class="nav-list-item"><a href="#mineralwater">市販のミネラルウォーター</a></li>
+    </ul>
+  </header>
+ 
+
+<section class="content" id="about">
+      <h2 class="heading">水について</h2>
+      <p class="description"> 水は、私たちの生活に欠かせないものです。人間は水なしでは三日程しか生きられません。体内の水分量を補うことで新陳代謝が活発になり、体温を上げたり老廃物を排出する効果もあります。そうしてむくみや便秘が解消されることに繋がることもあるのです。このサイトではこれらのことを踏まえつつ、市販に売っているミネラルウォーターを個人的な見解とともに紹介していきたいと思います。</p>
+    </section>
+<section class="content" id="hardsoft">
+        <h2 class="heading">硬水・軟水</h2>
+    <p class="description">水には硬水・軟水があります。日本では硬度100以下が軟水と定義されています。硬水はミネラル摂取やダイエットに良いとされていますが、飲みすぎには注意です。対して軟水は、口当たりが優しいため赤ちゃんでも安心して飲むことができます。ちなみに、日本では圧倒的に軟水のミネラルウォーターが多いです。</p>
+    </section>       
+<section class="content" id="mineralwater">
+      <h2 class="heading">市販のミネラルウォーター</h2>
+      <div class="pet-flex-container">
+    <div class="pet-flex-item"> <img src="images/water01.jpg" alt="Volvic画像">
+          <div class="petInfo">
+        <h3 class="name"> Volvic</h3>
+        <p>(フランス)ダノン </p>
+        <p>(日本)キリンビバレッジ</p>
+        <p>500ml</p>
+        <p>軟水 硬度60mg/L</p>
+              <br>
+              <p>・他の軟水ミネラルウォーターに比べて硬度が高いため、飲みごたえがある。</p>
+              <p>・口に運ばれてきたときに、水がまとまって入ってくるような感覚。</p>
+              <p>・2020年末に国内生終了。</p>
+      </div>
+        </div>
+    <div class="pet-flex-item"> <img src="images/water02.jpg" alt="南アルプスの天然水画像">
+          <div class="petInfo">
+        <h3 class="name"> 南アルプスの天然水</h3>
+        <p>SANTORY</p>
+        <p>550ml</p>
+        <p>軟水 硬度30mg/L</p>
+              <br>
+              <p>・口当たりが柔らかく、口の中ですぐに溶けていく質感。</p>
+              <p>・のどごしはあまりなくみずみずしい。</p>
+              <p>・自動販売機やコンビニで買い求め安い。</p>
+      </div>
+        </div>
+    <div class="pet-flex-item"> <img src="images/water03.jpg" alt="富士山の天然水画像">
+          <div class="petInfo">
+        <h3 class="name"> おいしい水 富士山</h3>
+        <p>Asahi</p>
+        <p>600ml</p>
+        <p>軟水 硬度30mg/L</p>
+              <br>
+              <p>・深井戸水で溶け込んでいるミネラル量が多い。</p>
+              <p>・600mlと大容量だが、かばんに入れても邪魔にならないつくり。</p>
+              <p>・富士山のデザインボトル。</p>
+      </div>
+        </div>
+  </div>
+      <div class="pet-flex-container">
+    <div class="pet-flex-item"> <img src="images/water04.jpg" alt="miu画像">
+          <div class="petInfo">
+        <h3 class="name"> miu</h3>
+        <p>DyDo</p>
+        <p>550ml</p>
+        <p>軟水 88mg/L</p>
+              <br>
+              <p>・硬度は他に比べて高いが、それを感じさせないほど口当たりが柔らかいく飲みやすい。</p>
+              <p>・不純物を取り除いた純水に海洋深層水のミネラル成分を加えている。</p>
+      </div>
+        </div>
+    <div class="pet-flex-item"> <img src="images/water05.jpg" alt="evian画像">
+          <div class="petInfo">
+        <h3 class="name"> evian</h3>
+        <p>(フランス)ダノン</p>
+        <p>(日本)伊藤園・伊藤忠ミネラルウォーターズ</p>
+        <p>500ml</p>
+        <p>硬水 304mg/L</p>
+              <br>
+              <p>・硬水だが、口当たりは柔らかく飲みやすい。</p>
+              <p>・お腹に溜まりやすいため、ダイエットにも良い。</p>
+              <p>・500mlだが、スリムで持ち運びしやすい。</p>
+              <p>・サイズ展開が多い。</p>
+      </div>
+        </div>
+    <div class="pet-flex-item"> <img src="images/water06.png" alt="水を飲む画像">
+          <div class="petInfo">
+        <h3 class="name"> 個人の感想です。</h3>
+        
+      </div>
+        </div>
+  </div>
+    </section>
+
+
+</body>
+
+</html>
