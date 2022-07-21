@@ -13,11 +13,12 @@
 }
 
 .title {
-    color:#123;
+    color: #123;
     font-size: 1.5em;
     line-height: 1.5em;
-        padding: 1em;
-     font-family: "Noto Sans JP";
+    padding: 1em;
+    font-family: 'Kaisei Opti', serif;
+
 }
 
 .year {
@@ -42,14 +43,14 @@
     border-radius: 1em;
 }
 
-.content a{
+.content a {
     text-decoration: none;
 }
 
 .sid {
     margin: 1em 0;
     text-align: center;
-    color:#123;
+    color: #123;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -63,9 +64,9 @@ footer {
 
 
 @media (max-width:600px) {
- 
-.flexbase {
-    flex-direction: column;
-}
-    
+
+    .flexbase {
+        flex-direction: column;
+    }
+
 }
