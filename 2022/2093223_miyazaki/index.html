@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2093223建築コレクション</title>
+
+    <link rel="stylesheet" href="the-new-css-reset.css" type="text/css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="image0/wb7212.svg" alt="建築コレクション">
+            </div>
+
+            <nav class="menu">
+                <ul class="flex-base">
+                    <li class="f-menu"><a href="#home">シエルキッチン</a></li>
+                    <li class="f-menu"><a href="#about">アクアリウム</a></li>
+                    <li class="f-menu"><a href="#services">ハニカムハウス</a></li>
+                    <li class="f-menu"><a href="#contact">プリマベーラ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <div id="container">
+
+
+        <div class="a1">
+            <section class="flex-base">
+                <div class="flex-item">
+                    <h2 id="home"> <a href="sieru.html">シエルキッチン</a> </h2>
+                    <div class="flex-item fade-in-left">
+                        <img class="aaa" class="flex-item fade-in-left" src="image0/マンションアクソメ.jpg">
+                    </div>
+                    <p>
+                        普段料理人として活躍する依頼人のために、家でも存分に料理ができるようにキッチンを広めに設置して沢山の友人を招くこともあるため、ダイニングとリビング、バルコニーへ続いて多くの人が訪れてものびのびと過ごせるよう開放的な空間にしてみた。建物は川に面しているマンションの八階の一室で空に近い部屋の為、雲をイメージした部屋となっています。その為、色は白をメインにして差し色の空の青を入れました。照明は間接照明をメインとしています。
+                    </p>
+
+                </div>
+            </section>
+        </div>
+        </section>
+
+
+        <div class="a1">
+            <section class="flex-base">
+                <div class="flex-item">
+                    <h2 id="about"> <a href="akua.html">アクアリウム</a></h2>
+                    <div class="flex-item fade-in-right">
+                        <div class="sss"></div><img class="bbb" claas="flex-item fade-in-right"
+                            src="image0/アクアリウム外観.JPG">
+                    </div>
+                    <p>
+                        アクアリウムを作ることが趣味な30代夫婦が自分たちの作品をお客様に見てもらえるように一息つけるようなアクアリウムカフェを計画した。太陽の光を取り入れられる設計にしたため、太陽に光によって反射する水槽が綺麗に見えるように仕上げました。二階はアウトドアも趣味でカフェ経営の為休みがとりづらくなり以前よりキャンプに行けなくなった夫婦のために、二階の居住空間は自然を取り入れて、グランピングの雰囲気を楽しめるような屋内庭園のあるリビングにしました。
+                    </p>
+                </div>
+            </section>
+        </div>
+        </section>
+
+
+        <div class="a1">
+            <section class="flex-base">
+                <div class="flex-item">
+                    <h2 id="services"> <a href="hamikamu.html">ハニカムハウス</a> </h2>
+                    <div class="flex-item fade-in-left">
+                        <img class="aaa" class="flex-item fade-in-left" src="image0/ハニカム外観.JPG">
+                    </div>
+                    <p>
+                        住宅の形をハニカム構造をモチーフに、中心に八角形をその周りに六角形を四つ配置する形に計画した。実家とデッキがつながっており、お互いの家を行き来できるように設計した。一階を実家との家族団らんスペースに、二階をファミリースペースに作った。ロフト上の二階部分はアスレッチク要素を取り入れてこともたちが楽しめるように工夫した。
+                    </p>
+                </div>
+            </section>
+        </div>
+        </section>
+
+
+        <div class="a1">
+            <section class="flex-base">
+                <div class="flex-item">
+                    <h2 id="contact"> <a href="purima.html">プリマベーラ</a> </h2>
+                    <div class="flex-item fade-in-right">
+                        <img class="bbb" class="flex-item fade-in-right" src="image0/プリマ模型外観 (2).jpg">
+                    </div>
+                    <p>目黒区の高級住宅が立ち並ぶ中に計画されたテラスハウス。このテラスハウスは目黒川で有名な桜をモチーフに、一つの花びらに一つの住居の形を計画した。それぞれの住居に対面するように、二つの大きな桜の木を配置して、春を心地のいいテラスハウスに仕上げた。一階はダイニングとキッチン、リビングを中心に計画して大きな窓を多く配置することで桜だけでなく、その他にも植えられた樹木を見ることができて、緑を感じられる。二階はプライゲート空間をまとめ、目の前の桜を見ながら、読書ができる落ち着いた空間に仕上げた
+                    </p>
+                </div>
+            </section>
+        </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+
+            $(window).scroll(function () {
+                var scrollAnimationElm = document.querySelectorAll('.fade-in-up , .fade-in-right , .fade-in-left');
+                var scrollAnimationFunc = function () {
+                    for (var i = 0; i < scrollAnimationElm.length; i++) {
+                        var triggerMargin = 200;
+                        if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                            scrollAnimationElm[i].classList.add('on');
+                        }
+                    }
+                }
+                window.addEventListener('load', scrollAnimationFunc);
+                window.addEventListener('scroll', scrollAnimationFunc);
+            });
+        </script>
+
+        <script>
+            $(function () {
+                $("a[href^='#']").click(function () {
+                    var target = $(this.hash);
+                    var position = $(target).offset().top;
+                    $('html,body').animate({
+                        scrollTop: position
+                    }, 500);
+                    return false;
+                });
+            });
+        </script>
+        <footer>
+            <p>&copy; 2022-2030 kasei&kaho</p>
+        </footer>
+    </div>
+</body>
+
+</html>

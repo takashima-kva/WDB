@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+head {
+    display: none;
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: rgb(243, 255, 240);
+    line-height: 3;
+}
+
+header {
+    background-color: rgb(192, 224, 255);
+    padding: 2em 0;
+}
+
+.header-wrapper {
+    justify-content: space-between;
+    max-width: 2000px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flex {
+    margin-top: 5px;
+    display: flex;
+}
+
+.f-menu{
+    line-height: 3em;
+    text-align: center;
+    background-color: rgb(173, 255, 252);
+    margin: 0 1px;
+   flex: 1;
+  }
+  
+.menu {
+    box-sizing: border-box;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .menu ul li{
+border-left: blue solid 3px;
+text-align: center;
+padding: 0 1em;
+} */
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a {
+    font-size: large;
+}
+
+h2{
+    background-color: white;
+    overflow: hidden;
+    padding: 0.5em;
+    width: 25%;
+    border: 1rem solid aqua;
+}
+
+nav.menu ul li a {
+    display: block;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    text-decoration: none;
+    border-left: blue solid 3px;
+    border-right:blue solid 3px ;
+    padding: 0 2em;
+}
+
+.a1 {
+    background-color: #cdedf4;
+    margin: 1em;
+    padding: 1em;
+
+    clear: both;
+    overflow: hidden;
+}
+
+
+p {
+    background-color: #cdedf4;
+    padding: 10px;
+}
+
+
+.aaa {
+    width: 400px;
+    height: 300px;
+    float: left;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.bbb {
+    width: 400px;
+    height: 300px;
+    float: right;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+
+footer {
+    clear: both;
+    background-color: green;
+    line-height: 2em;
+    text-align: center;
+    color: #fff;
+}
+
+.flex-base {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+}
+
+
+
+.fade-in-up {
+    transition: 1.2s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.fade-in-up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+
+
+.fade-in-right {
+    transition: 1.2s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.fade-in-right.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+
+.fade-in-left{
+    transition: 1.2s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.fade-in-left.on{
+    transform: translateX(0);
+    opacity: 1.0;
+}
