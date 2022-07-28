@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio-KanataniLuna</title>
+
+    <link rel="stylesheet" href="the-new-css-reset.css" type="text/css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="index.css">
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <script>
+      $(function () {
+        $('a[href^="#"]').click(function () {
+          var speed = 300;
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({ scrollTop: position }, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+<body>
+  <header id="top">
+  <h4 class="title">Portfolio</h4>
+  <p class="sub-title">Kanatani Luna</p>
+  </header>
+
+
+  <button class="drawer_open" id="js-button"><span></span></button>  <!-- ハンバーガーになるボタン -->
+  <nav class="menu_flex">
+    <ul>
+      <li><a href="#top">Top</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+   
+
+  <div class="container">
+    <h2 class="heading" id="works">Works</h2>
+
+    <section class="flex-base">
+      <div class="flex-item fade-in-right">
+          <img src="image/image06.jpg" alt="シェアハウス">
+      </div>
+      <div class="flex-item">
+          <h3>Nature House</h3>
+          <p>シェアハウスの設計
+            <br>(3年前期後半)</p>
+            <a href="work6.html" class="btn">more →</a>
+      </div>
+  </section>
+
+    <section class="flex-base">
+      <div class="flex-item">
+          <h3>Turn house</h3>
+          <p>テラスハウスの設計
+            <br>(3年前期前半)
+          </p> 
+          <a href="work5.html" class="btn">more →</a>      
+      </div>
+      <div class="flex-item fade-in-left">
+          <img src="image/image01.jpg" alt="テラスハウス">
+      </div>
+  </section>
+      
+      
+
+    <section class="flex-base">
+        <div class="flex-item fade-in-right">
+            <img src="image/image02.jpg" alt="戸建て住宅">
+        </div>
+        <div class="flex-item">
+            <h3>Reach</h3>
+            <p>戸建て住宅の設計
+              <br>(2年後期後半)</p>
+              <a href="work4.html" class="btn">more →</a>
+        </div>
+    </section>
+
+    <section class="flex-base">
+        <div class="flex-item">
+            <h3>まる</h3>
+            <p>店舗併用住宅の設計
+              <br>（2年後期前半））</p>
+              <a href="work3.html" class="btn">more →</a>
+        </div>
+        <div class="flex-item fade-in-left">
+            <img src="image/image03.jpg" alt="店舗併用住宅">
+        </div>
+    </section>
+
+    <section class="flex-base">
+        <div class="flex-item fade-in-right">
+            <img src="image/image04.jpg" alt="インテリア設計">
+        </div>
+        <div class="flex-item">
+            <h3>Egg room</h3>
+            <p>マンションの1室のインテリア設計
+              <br>(2年前期)</p>
+              <a href="work2.html" class="btn">more →</a>
+        </div>
+    </section>
+
+    
+    <section class="flex-base">
+        <div class="flex-item">
+            <h3>自然あふれる家</h3>
+            <p>10×10ｍの1階建ての小住宅
+              <br>（1年後期）</p>
+              <a href="work1.html" class="btn">more →</a>
+        </div>
+        <div class="flex-item fade-in-left">
+            <img src="image/image05.jpg" alt="1階建て小住宅">
+        </div>
+    </section>
+
+
+  </div>
+
+  <div class="container content">
+    <h2 class="heading" id="profile">Profile</h2>
+    <img src="image/image00.png" alt="個人写真">
+     <p> 金谷 瑠奈 (カナタニ ルナ）</p>
+     <p>東京家政学院大学 現代生活学部 生活デザイン学科</p>
+     <p>山梨県出身</p>
+     <p class="space sub">2017年 4月  高校入学</p>
+     <p class="sub">2020年 3月  高校卒業</p>
+     <P class="sub">2020年 4月  大学入学</P>
+  
+    </div>
+
+  <div class="container content">
+    <h2 class="heading" id="contact">Contact</h2>
+    <p>感想・アドバイスをお寄せいただけると嬉しいです!</p>
+
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      
+      <div class="Form-Item">
+        
+       <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+       <input type="text"  name="name" class="Form-Item-Input" placeholder="例）家政 花子">
+      </div>
+      
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+        <input type="text" name="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+      </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>内容</p>
+        <textarea name="message" class="Form-Item-Textarea"></textarea>
+      </div>
+       <input type="submit" class="Form-Btn" value="送信する">
+       <input type="hidden" name="accessKey" value="0b808f3a-b970-4861-b557-fe3ddb4ef865"> <!-- Required -->
+      
+     
+    </form>
+ </div>
+
+ <footer>
+  <p>&copy; 2022 portfolio-KanataniLuna.</p>
+ </footer>
+  
+ 
+  
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+ <script>
+  //スクロールエフェクト
+  $(window).scroll(function() {
+      var scrollAnimationElm = document.querySelectorAll('.fade-in-up , .fade-in-right , .fade-in-left');
+      var scrollAnimationFunc = function() {
+          for (var i = 0; i < scrollAnimationElm.length; i++) {
+              var triggerMargin = 200;
+              if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                  scrollAnimationElm[i].classList.add('on');
+              }
+          }
+      }
+      window.addEventListener('load', scrollAnimationFunc);
+      window.addEventListener('scroll', scrollAnimationFunc);
+  });
+ </script>
+
+
+
+  <script>
+    //リンク移動時のスクロールアニメーション
+    $(function () {
+      var headerHeight = 100; // 固定ヘッダーなどでリンク先の位置をずらしたいとき用
+      $("a[href^='#']").click(function () {
+        var target = $(this.hash);
+        var position = $(target).offset().top;
+        $('html,body').animate({
+          scrollTop: position - headerHeight
+        }, 500);
+        return false;
+      });
+    });
+  </script>
+
+
+</body>
+
+
+</html>
