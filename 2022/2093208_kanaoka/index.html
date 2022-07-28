@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カフェマップ</title>
+
+    <link href="the-new-css-reset.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Megrim&family=Noto+Serif+SC:wght@200&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+
+    <link href="2093208-b.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- <a href="https://www.kasei-gakuin.ac.jp">aaaaaa</a>
+    <a href="#hachioji">aaaaaa</a> -->
+    <section class="hero-image center cover attachFixed">
+        <!-- <h2 id="top">ああ</h2> -->
+        <h2 id="top">横浜線と </h2>
+        <h2>珈琲と </h2>
+        <h2>甘い物と </h2>
+    </section>
+
+
+   <section class="separator1">
+       <!-- <h2>横浜線と 珈琲と 甘い物と</h2> -->
+       <h2 class="a">~ 八王子駅から町田駅編 ~</h2>
+       <p class="b">JP横浜線に乗って巡るカフェマップ</p>
+       <p class="b">東京の端っこにも素敵なお店はたくさんあります</p>
+       <p class="b">そんな素敵なお店を駅ごとに紹介します</p>
+   </section>
+
+   <section class="separator2">
+        <h2 class="c">マップ</h2>
+        <p class="d">緑は横浜線　赤はお店の位置です</p>
+        <p class="d">八王子駅から町田駅まで6駅と13店舗の紹介です</p>
+        <p> </p>
+
+        <img src="image/map03.PNG">
+    </section>
+
+    <!-- <button class="drawer_open" id="js-button"><span></span></button>  -->
+
+   <nav class="menu" id="js-nav">
+    <ul>
+        <li><a href="#top">トップ</a></li>
+        <li><a href="#hachioji">八王子</a></li>
+        <li><a href="#katakura">片倉</a></li>
+        <li><a href="#aihara">相原</a></li>
+        <li><a href="#hashimoto">橋本</a></li>
+        <li><a href="#yabe">矢部</a></li>
+        <li><a href="#machida">町田</a></li>
+    </ul>
+    </nav>
+
+    <div class="container ">
+        <section class="flex-base1">
+            <div class="flex-item">
+                <h2 id="hachioji">八王子駅</h2>
+                <p>1 . Cafe rin</p>
+                <p>2 . coffee ritmos</p>
+            </div>
+            <div class="flex-item fade-in-up">
+                <img src="image/cafe1-1.jpg">
+            </div>
+        </section>
+
+        <section class="flex-base2">
+            <div class="flex-item fade-in-right">
+                <img src="image/cafe3-1.jpg">
+            </div>
+            <div class="flex-item">
+                <h2 id="katakura">片倉駅</h2>
+                <p>3 . 月待チ珈琲店</p>
+            </div>
+        </section>
+
+        <section class="flex-base1">
+            <div class="flex-item">
+                <h2 id="aihara">相原駅</h2>
+                <p>4 . 木のカフェ</p>
+                <p>5 . 奇妙な植物園</p>
+            </div>
+            <div class="flex-item fade-in-up">
+                <img src="image/cafe5-1.jpg">
+            </div>
+        </section>
+
+        <section class="flex-base2">
+            <div class="flex-item fade-in-left">
+                <img src="image/cafe9-5.jpg">
+            </div>
+            <div class="flex-item">
+                <h2 id="hashimoto">橋本駅</h2>
+                <p>6 . うたたね舎</p>
+                <p>7 . SUMI BAKE SHOP</p>
+                <p>8 . ノイロ.2nd dining</p>
+                <p>9 . finn coffee</p>
+            </div>
+        </section>
+        
+        <section class="flex-base1">
+            <div class="flex-item">
+                <h2 id="yabe">矢部駅</h2>
+                <p>10 . アトリエノcafe&bar</p>
+                <p>11 . ソラ珈琲&食堂ヒュッテ</p>
+            </div>
+            <div class="flex-item fade-in-up">
+                <img src="image/cafe10-1.jpg">
+            </div>
+        </section>
+
+        <section class="flex-base2">
+            <div class="flex-item fade-in-right">
+                <img src="image/cafe13-1.jpg">
+            </div>
+            <div class="flex-item">
+                <h2 id="machida">町田駅</h2>
+                <p>12 . beans farm</p>
+                <p>13 . 403 not found</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        //スクロールエフェクト
+        $(window).scroll(function() {
+            var scrollAnimationElm = document.querySelectorAll('.fade-in-up , .fade-in-right , .fade-in-left');
+            var scrollAnimationFunc = function() {
+                for (var i = 0; i < scrollAnimationElm.length; i++) {
+                    var triggerMargin = 200;
+                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                        scrollAnimationElm[i].classList.add('on');
+                    }
+                }
+            }
+            window.addEventListener('load', scrollAnimationFunc);
+            window.addEventListener('scroll', scrollAnimationFunc);
+        });
+    </script>
+
+
+
+
+    <!-- <section class="content" id="hachioji">
+        <h2 class="heading">八王子駅</h2>
+
+        <div class=flex-base> 
+            <div class="flex-item fade-in-up"><img src="image/cafe1-1.jpg" alt="cafe1"></div>
+            <div class="cafeInfo">
+              <h3 class="cafename"> Cafe rin</h3>
+              <p>毎月企画展を開く隠れ家カフェ</p>
+              <h3 class="etc"> open</h3><p> 平日12:00~18:00.休日12:00~17:00</p>
+              <h3 class="etc"> closed</h3><p> 月・火</p>
+              <h3 class="etc"> access</h3><p> 八王子駅から徒歩約15分</p>
+              <div class="googlemap_wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.3610310913323!2d139.33202083397688!3d35.66151917258061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191e79952888fd%3A0xe36c37c0103fe00f!2zQ2FmZSByaW4g44Kr44OV44Kn44Oq44Oz!5e0!3m2!1sja!2sjp!4v1643706683356!5m2!1sja!2sjp" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+        </div>
+
+        <div class="flex-base"> 
+            <div class="flex-item fade-in-left"> <img src="image/cafe2-1.jpg" alt="cafe1"></div>
+            <div class="cafeInfo">
+              <h3 class="cafename"> coffee ritmos</h3>
+              <p>カップスリーブに絵を描いて提供するコーヒーショップ</p>
+              <h3 class="etc"> open</h3><p> 12:00~21:00</p>
+              <h3 class="etc"> closed</h3><p> 不定休</p>
+              <h3 class="etc"> access</h3><p> 八王子駅から徒歩約3分</p>
+              <div class="googlemap_wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.940461606524!2d139.3378145!3d35.6538385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191daea550f3cf%3A0x2a029eb711c9cf7d!2sCOFFEE%20ritmos!5e0!3m2!1sja!2sjp!4v1658962067174!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+        </div>
+  </section> -->
+
+
+    <section class="separator3">
+        <p>© 2022 2093208.</p>
+    </section>
+
+
+    <!-- <script>
+        // ハンバーガーメニュー（ボタン）クリック時の処理
+        $('#js-button').on('click', function () { // ボタンがクリックされたら
+          $('#js-button').toggleClass('active');  // ボタンにactiveクラスを付ける/外す
+          $('#js-nav').toggleClass('active');     // メニュー部分にactiveクラスを付ける/外す
+        });
+    
+        // リンク移動時にハンバーガーメニューを消すための処理
+        $('a[href^="#"]').on('click', function () { // ページ内リンクがクリックされたら
+          $('#js-button').removeClass('active');    // ボタンからactiveクラスを外す
+          $('#js-nav').removeClass('active');       // メニュー部分からactiveクラスを外す
+          return false;
+        });
+    </script> -->
+   
+</body>
+
+</html>

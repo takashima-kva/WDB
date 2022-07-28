@@ -1,0 +1,195 @@
+@charset "utf-8";
+header {
+    background-color: rgb(172, 144, 109);
+    
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    size: auto;
+}
+
+.menu {
+    width: 60%;
+    color: rgb(226, 216, 198);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: rgb(91, 50, 8); */
+}
+
+section {
+    margin: 1rem 0;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* IE用 */
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    color: #55edc2;
+}
+p{
+    color:   rgb(226, 216, 198);
+}
+
+
+.free-space {
+    min-height: 30vh;
+    background-color: rgba(67, 36, 14, 0.703);
+    padding: 1rem;
+}
+
+.flex-base {
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+}
+
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+    background-color: rgb(48, 123, 188);
+}
+
+
+/* 下から上へフェードイン */
+
+.fade-in-up {
+    transition: 1.2s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.fade-in-up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+
+
+/* 左から右へフェードイン */
+
+.fade-in-right {
+    transition: 1.2s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.fade-in-right.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+    /* 右から左 */
+
+.fade-in-left {
+    transition: 1.2s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.fade-in-left.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+@media screen and (max-width: 600px) {
+    /* チェックボックスを非表示にする */
+    /* .drawer_hidden {
+        display: none;
+    } */
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        /* 重なり順を一番上にする */
+        cursor: pointer;
+    }
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.2s;
+        position: absolute;
+    }
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 8px;
+    }
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 8px;
+    }
+
+    /* メニューのデザイン*/
+    .menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #fff;
+        opacity: 0.9;
+        transition: 0.2s;
+    }
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu ul li {
+        margin: 1em auto;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+        left:0;
+      }
+    .drawer_open.active span {
+        background: rgba(255, 255, 255, 0);
+    }
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    .drawer_open.active span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .drawer_open.active span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+}

@@ -1,0 +1,336 @@
+@charset "utf-8";
+body{
+    background-color: #fbf8f1;
+}
+
+.hero-image{
+    background-color: lightgray;
+    background-image: url(image/top.PNG);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 10px;
+    padding: 8vw;
+    text-align: left;
+}
+.hero-image h2{
+    font-size: 3em;
+    margin-bottom: 1em;
+    /* margin-left: 1em; */
+    font-family: 'Shippori Mincho', serif;
+    color: #68534d;
+}
+
+
+
+.center{
+    background-position: center center;
+}
+.contain{
+    background-size: contain;
+}
+.cover{
+    background-size: cover;
+}
+.attachFixed{
+    background-attachment: fixed;
+}
+
+.separator1 {
+    /* height: 200vh; */
+    /* background-color: #fbf8f1; */
+    text-align: center;
+    padding: 1.5em;
+    color: #68534d;
+    /* color: #fbf8f1; */
+    font-family: 'Shippori Mincho', serif;
+    /* background-image: linear-gradient(#68534d,#fbf8f1); */
+}
+.separator2{
+    text-align: center;
+    padding: 1.5em;
+    color: #68534d;
+    font-family: 'Shippori Mincho', serif;
+}
+
+
+.a{
+    font-size: 2.1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.b{
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+.c{
+    font-size: 2em;
+    margin-top: 6em;
+    margin-bottom: 3em;
+}
+.d{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+.separator2 img{
+    width: 90%;
+    margin-bottom: 5em;
+}
+.separator3{
+    text-align: center;
+    color: #68534d;
+    font-size: 0.8em;
+    font-family: 'Shippori Mincho', serif;
+    padding-top: 10em;
+    padding-bottom: 2em;
+}
+
+.menu {
+    background-color: #68534d;
+    color: #fbf8f1;
+    font-family: 'Shippori Mincho', serif;
+    padding: 4em 2em;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+nav.menu ul li a:hover { 
+    color: #94d39f;
+}
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1500px;
+    /* margin: 0 auto; */
+    font-family: 'Shippori Mincho', serif;
+    padding-top: 15em;
+    /* background-color: yellow; */
+}
+
+section {
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* IE用 */
+}
+section h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+}
+section p {
+    margin-bottom: 1em;
+}
+.flex-base1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #b24230;
+    color: #fbf8f1;
+}
+.flex-base2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fbf8f1;
+    color: #b24230;
+}
+.flex-item {
+    flex: 1;
+    padding: 2rem;
+    /* background: lightcoral; */
+    line-height: 2em;
+    
+}
+.flex-item h2 {
+    padding-bottom: 2em;
+}
+/* 下から上へフェードイン */
+.fade-in-up {
+    transition: 1.2s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.fade-in-up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+/* 左から右へフェードイン */
+.fade-in-right {
+    transition: 1.2s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+.fade-in-right.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+.fade-in-left {
+    transition: 1.2s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+}
+.fade-in-left.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+
+
+
+
+
+
+
+/* .content {
+    padding: 7rem 0;
+    font-size: 1.6rem;
+}
+.heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.description {
+    line-height: 3rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+#about, #message {
+    background-color: rgb(50, 58, 83);
+    color: whitesmoke;
+}
+#hashimoto, #tokyo ,#kanagawa{
+    background-color: rgba(50,58,83,0.6); 
+    color: white;
+}
+.cafe-flex-item {
+    margin: 1rem;
+    border: solid thin whitesmoke;
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+.cafe-flex-item img { 
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;  
+}
+.cafeInfo {
+    padding: 2rem;
+    color: rgb(50, 58, 83);
+}
+.cafename {
+    background-color: gold;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.name {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.name1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+}
+.googlemap_wrapper{ 
+  position: relative;
+  margin: 2rem 2rem 0;
+  padding-bottom: 20rem;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem; 
+}
+.googlemap_wrapper iframe { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+} */
+
+
+
+
+/* @media screen and (max-width: 600px) { 
+
+    .drawer_hidden {
+        display: none;
+    }
+    .drawer_open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        
+        cursor: pointer;
+    }
+    
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: seashell;
+        transition: 0.2s;
+        position: absolute;
+    }
+   
+    .drawer_open span:before {
+        bottom: 8px;
+    }
+    
+    .drawer_open span:after {
+        top: 8px;
+    }
+
+    .menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+
+        z-index: 99;
+        background: #68534d;
+        opacity: 0.8;
+        transition: 0.2s;
+    }
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu ul li {
+        margin: 1em auto;
+    }
+    .menu.active {
+        transform: translateX(0);
+        left:0;
+      }
+    .drawer_open.active span {
+        background: rgba(255, 255, 255, 0);
+    }
+    .drawer_open.active span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .drawer_open.active span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}  */

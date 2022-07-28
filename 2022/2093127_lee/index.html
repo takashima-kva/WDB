@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コーヒーレビュー</title>
+
+    <link rel="stylesheet" href="the-new-css-reset.css" type="text/css">
+    <link rel="stylesheet" href="coffee review.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="image/cafe_coffee_beans.png" alt="コーヒー豆">
+            </div>
+            <button class="drawer_open" id="js-button"><span></span></button>  <!-- ハンバーガーになるボタン -->
+      
+            <nav class="menu"  id="js-nav">
+                <ul>
+                    <li><a href="#start">概要</a> </li>
+                    <li><a href="#home">ドリッパー</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="free-space">
+            <h2 id="start">
+                コーヒーレビュー
+            </h2>
+            <p>
+               ・ 家でできるドリッパー、フレンチプレス、エスプレッソメーカーを使って淹れたコーヒーについてレビュー
+            </p>
+            <p>
+                ・ 市販の缶コーヒーとドリップパックにつてもレビュー
+                
+            </p>
+            <p>
+                ・ 上から下でおすすめ順
+            </p>
+        </section>
+
+        <section class="flex-base">
+            <div class="flex-item">
+                <h2 id="home">ドリッパー</h2>
+                <p>
+                    ・ 一番知られているコーヒーの淹れ方、ほとんどのコーヒーはこの方法で淹れられている。味はバランスが良く、自分は牛乳をいれてカフェオレにして飲む
+
+                </p>
+                <p>
+                    ・ 淹れるコツを掴めばおいしく出来上がるし、自分好みにカスタマイズ出来るので一番おすすめです
+                </p>
+            </div>
+            <div class="flex-item fade-in-up">
+                <img src="image/1.jpg">
+            </div>
+        </section>
+
+        <section class="flex-base">
+            <div class="flex-item">
+                <img class="flex-item fade-in-right" src="image/2.JPG">
+            </div>
+            <div class="flex-item">
+                <h2 id="about">フレンチプレス</h2>
+                <p>
+                    ・ 一番簡単で誰でもおいしく淹れられる方法
+                </p>
+                <p>
+                    ・ メーカーに粉とお湯を入れるだけで、できるのでコーヒーに詳しくないけど家で飲みたい方にはやさしい淹れ方。味は少し薄くなるが、冷たいアイスコーヒーがとてもよく合う。二番におすすめです
+                </p>
+            </div>
+        </section>
+
+        <section class="flex-base">
+            <div class="flex-item ">
+                <h2 id="services">エスプレッソメーカー</h2>
+                <p>
+                    ・ 有名なエスプレッソメーカー、作り方を覚えれば難しくない。火を使うのでこどもに注意！
+                </p>
+                <p>
+                    ・ このエスプレッソメーカーで淹れたコーヒーはとても濃く、コーヒーのすべて濃縮したような味がしてエスプレッソが好きな方は試してみてください。
+                    私は牛乳多めのカフェオレにして飲む。コーヒー好きでも好き嫌いが別れるので三番目におすすめ
+                </p>
+            </div>
+            <div class="flex-item fade-in-up">
+                <img src="image/3.jpg">
+            </div>
+
+        </section>
+
+        <section class="flex-base">
+            <div class="flex-item">
+                <img class="flex-item fade-in-left" src="image/4.jpg">
+                
+
+            </div>
+            <div class="flex-item">
+                <h2 id="contact">市販</h2>
+                <p>
+                    ・ 市販の缶コーヒーとドリップパックはほとんどのコンビニやスーパー等に置いてあるのでとても手に入れやすい。
+
+                </p>
+                <p>
+                    ・ 缶コーヒーはお砂糖が入ってるものが多くてコーヒー飲めない人でもおいしくいただけると思う
+
+                </p>
+                <p>
+                    ・ ドリップパックでコーヒーを作るに必要なものはお湯とコップだけだから、味は落ちるが、忙しい時にはとても助かる。
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        //スクロールエフェクト
+        $(window).scroll(function() {
+            var scrollAnimationElm = document.querySelectorAll('.fade-in-up , .fade-in-right,.fade-in-left');
+            var scrollAnimationFunc = function() {
+                for (var i = 0; i < scrollAnimationElm.length; i++) {
+                    var triggerMargin = 200;
+                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                        scrollAnimationElm[i].classList.add('on');
+                    }
+                }
+            }
+            window.addEventListener('load', scrollAnimationFunc);
+            window.addEventListener('scroll', scrollAnimationFunc);
+        });
+    </script>
+
+    <script>
+        //リンク移動時のスクロールアニメーション
+        $(function() {
+            $("a[href^='#']").click(function() {
+                var target = $(this.hash);
+                var position = $(target).offset().top;
+                $('html,body').animate({
+                    scrollTop: position
+                }, 200);
+                return false;
+            });
+        });
+    </script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // ハンバーガーメニュー（ボタン）クリック時の処理
+    $('#js-button').on('click', function () { // ボタンがクリックされたら
+      $('#js-button').toggleClass('active');  // ボタンにactiveクラスを付ける/外す
+      $('#js-nav').toggleClass('active');     // メニュー部分にactiveクラスを付ける/外す
+    });
+
+    // リンク移動時にハンバーガーメニューを消すための処理
+    $('a[href^="#"]').on('click', function () { // ページ内リンクがクリックされたら
+      $('#js-button').removeClass('active');    // ボタンからactiveクラスを外す
+      $('#js-nav').removeClass('active');       // メニュー部分からactiveクラスを外す
+      return false;
+    });
+  </script>
+
+  
+</body>
+
+</html>
