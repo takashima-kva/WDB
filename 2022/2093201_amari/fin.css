@@ -1,0 +1,259 @@
+@charset "utf-8";
+header {
+    background-color: beige;
+    /* position: sticky;
+    top:0; */
+    /* position:absolute;
+    width:100vw; */
+}
+
+.header-wrapper {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    /* position: sticky;
+    top:0; */
+}
+
+.logo{
+    margin: 0.5ex;
+    width: 30%;
+
+}
+
+
+
+
+
+.dropdown {
+    display: flex;
+    width: 60%;
+  }
+  
+  .menu {
+    width: 300px;
+    text-align: center;
+  }
+  
+  .menu-title {
+    color: #947963;
+  }
+  
+  .sub-menu {
+    display: none;
+    background:aliceblue;
+    position: relative;
+  }
+  
+  .sub-menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+  }
+  
+  .sub-menu > ul > li > a {
+    text-decoration: none;
+    color: #947963
+  }
+  
+  .menu:hover .sub-menu {
+    display: inline-block;
+  }
+
+
+#profile{
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 3rem 0;
+    padding: 1rem;
+    background-color: aliceblue;
+    clear: both;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    background-color: #000;
+}
+
+
+.slider .hero-image {
+    position: absolute; /* 複数の画像を重ねる */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* hero-imageにアニメーションを設定 */
+.slider .hero-image {
+    animation-name: hero-anima;
+    animation-iteration-count: infinite;
+    animation-duration: 15s; /*アニメーション全体の時間*/
+}
+
+.slider .hero-image:nth-of-type(1) {
+    background-image: url(image/renovation.jpg);
+}
+
+.slider .hero-image:nth-of-type(2) {
+    animation-delay: 5s;
+    background-image: url(image/wood.jpg);
+}
+
+.slider .hero-image:nth-of-type(3) {
+    animation-delay: 10s;
+    background-image: url(image/terracehouse.jpg);
+}
+
+
+/* アニメーションの定義（不透明度、拡大） */
+@keyframes hero-anima {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+.me{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.bun{
+    
+    width: 600px;
+    /* height: 200px; */
+    float: left;
+}
+
+
+footer{
+    margin: 3rem 0;
+    padding: 1rem;
+    background-color: beige;
+    text-align: center;
+}
+
+.sakuhin{
+    overflow: hidden;
+    margin: 1em;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.sakuhin img{
+    width: 250px;
+    height: 200px;
+    margin-right: 1em;
+}
+
+
+.left{
+	float:left
+}
+
+.right{
+	float: right;
+}
+
+.sakuhin img{
+	clear: both;
+}
+
+.left{
+	margin-right: 1em;
+}
+
+.right{
+	margin-left: 1em ;
+}
+
+.under{
+    background: linear-gradient(transparent 50%, #a8eaff 50%);
+}
+
+
+li {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+
+
+.naikan{
+    width: 200px;
+    height: 500px;
+}
+
+
+
+
+.reno{
+    font-family: 'EB Garamond', serif;
+}
+
+.wo{
+font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+
+.ter{
+    font-family: 'Zen Antique', serif;
+}
+
+h3{
+    font-size: 20px;
+}
+
+
+
+
+.con{
+    text-align: center;
+}
+
+
+html{
+    scroll-behavior: smooth;
+  }
