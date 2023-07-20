@@ -1,0 +1,185 @@
+@charset "utf-8";
+header {
+    background-color: lightgoldenrodyellow;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.photo{
+    width: 100%;
+    filter: saturate(80%);
+    filter: opacity(80%);
+}
+
+.menu {
+    width: 60%;
+    text-align: center;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    /* background-color: yellow; */
+}
+
+section {
+    margin: 1rem 0;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* IE用 */
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.free-space {
+    background-color: rgb(218, 247, 252);
+    padding: 1rem;
+    font-size: 26px;
+    text-align: center;
+    color: darkgrey;
+}
+
+.flex-base {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+}
+
+
+/* 下から上へフェードイン */
+
+.fade-in-up {
+    transition: 1.2s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.fade-in-up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+
+
+/* 左から右へフェードイン */
+
+.fade-in-right {
+    transition: 0.5s ease-in-out;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.fade-in-right.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+.fade-in-left {
+    transition: 2.5s ease-in-out;
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.fade-in-left.on {
+    transform: translateX(0);
+    opacity: 1.0;
+}
+
+/* スマホサイズでハンバーガーメニューを表示 */
+
+@media screen and (max-width: 600px) {
+    /* チェックボックスを非表示にする */
+    .drawer_hidden {
+        display: none;
+    }
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        /* 重なり順を一番上にする */
+        cursor: pointer;
+    }
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+    }
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 8px;
+    }
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 8px;
+    }
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer_input:checked~.drawer_open span {
+        background: rgba(255, 255, 255, 0);
+    }
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer_input:checked~.drawer_open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #drawer_input:checked~.drawer_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    /* メニューのデザイン*/
+    .menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #fff;
+        transition: .5s;
+    }
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu ul li {
+        margin: 1em auto;
+    }
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked~.menu {
+        left: 0;
+        /* メニューを画面に入れる */
+    }
+}

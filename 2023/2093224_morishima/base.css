@@ -1,0 +1,104 @@
+@charset "utf-8";
+header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body{
+    background-color: rgb(224, 200, 247);
+    /* width: 960px; */
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.logo{
+    flex: 1;
+    width:10%;
+}
+
+.menu {
+    /* width: 60%; */
+    flex: 4;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.omise{
+    width: 20%;
+}
+
+h1{
+    font-size: large;
+    margin: 5px;
+    padding: 5px;
+}
+
+h2{
+    margin: 10px;
+    padding: 10px;
+}
+
+h3{
+    margin: 5px;
+    padding: 5px;
+}
+
+p{
+    margin: 3px;
+    padding: 3px;
+}
+
+.menyu{
+    width: 40%;
+}
+
+iframe{
+    width: 500px;
+    height: 500px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pagetop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    margin: 0;
+    
+}
+#pagetop a{
+    position: relative;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    background: rgb(67, 64, 242);/*背景の色を変える*/
+    transition: opacity .6s ease;
+    color: #FFFFFF;/*アイコンの色を変える*/
+    align-items: center;
+    text-decoration: none;
+    font-size: 32px;
+    border-radius: 100%;
+}
+#pagetop a:hover {
+    opacity: .3;
+}
+
+table.info th, table.info td {
+    padding: 8px 8px 8px 8px;
+    border: 1px solid #060606;
+    text-align: left;
+    vertical-align: middle;
+}

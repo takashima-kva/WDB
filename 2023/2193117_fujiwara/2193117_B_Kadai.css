@@ -1,0 +1,426 @@
+body {
+  background-color: rgb(245, 216, 238)
+}
+
+/* header{
+  display: flex;
+} */
+
+/* イラストレーターのロゴ */
+.logo{
+  height: 60px;
+}
+
+
+
+/*左上のリボン*/
+.ribbon5 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;
+  /*文字サイズ*/
+  background: #c8c8c8;
+  /*背景色*/
+  color: #FFF;
+  /*文字色*/
+  box-sizing: border-box;
+}
+
+.ribbon5 h3 {
+  margin: 0;
+  padding: 0 30px 0 15px;
+  border-top: dashed 1px #FFF;
+  border-bottom: dashed 1px #FFF;
+  line-height: 46px;
+}
+
+.ribbon5:after {
+  position: absolute;
+  content: '';
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent rgb(245, 216, 238)transparent transparent;
+  border-style: solid;
+}
+
+
+/*吹き出し*/
+.balloon1-top {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  background: #bcbbbb;
+}
+
+.balloon1-top:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #bcbbbb;
+}
+
+.balloon1-top p {
+  margin: 0;
+  padding: 0;
+}
+
+/*文字をふわっと表示させる*/
+p {
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translatey(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+
+/*店名の文字サイズ↓*/
+.tenmei {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 3.0em
+}
+
+/*右下のボタン↓*/
+#page_top {
+  width: 80px;
+  height: 78px;
+  position: fixed;
+  right: 7px;
+  bottom: 7px;
+  background: #a7a8a5;
+  opacity: 0.6;
+}
+
+#page_top::after {
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*おすすめカフェ8選の文字↓*/
+h1 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 6.0em;
+  text-align: center;
+}
+
+
+
+/*　テープ　枠　1 */
+.kakomi-tape1 {
+  position: relative;
+  margin: 3em auto;
+  padding: 65px 20px 65px;
+  width: 80%;
+  /*ボックス幅*/
+  color: #555555;
+  /* 文字色 */
+  background-color: #ffffff;
+  /*背景色*/
+  box-shadow: 0 2px 2px #ccc;
+  /* 影 */
+}
+
+.kakomi-tape1::before {
+  position: absolute;
+  top: -1.5em;
+  left: 35%;
+  height: 40px;
+  width: 160px;
+  /*テープの幅*/
+  content: "";
+  border: 1px solid #ccc;
+  /*枠太さ・色*/
+  background-color: #9c9696;
+  /*テープ色*/
+  opacity: 0.3;
+  /*テープ透明度0～1*/
+  transform: rotate(-5deg);
+  /*テープ角度*/
+}
+
+
+
+
+
+/*マウスが乗った時のリンクの色↓*/
+a:hover {
+  color: rgb(253, 121, 193);
+}
+
+
+/*メニューバー↓*/
+#nav {
+  list-style: none;
+  overflow: hidden;
+}
+
+#nav li {
+  width: 290px;
+  text-align: center;
+  background-color: rgb(123, 115, 115);
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}
+
+#nav li a {
+  text-decoration: none;
+  color: rgb(244, 240, 240);
+  font-weight: bold;
+  padding: 20px;
+}
+
+
+/* .menu { */
+  /* background-color: rgb(251, 180, 226); */
+  /* width: 100%; */
+  /* flex:3; */
+/* } */
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+*/ .menu ul li {
+  background-color: rgb(244, 226, 226);
+  /*display: inline-block;*/
+  /*padding: 0 3em;*/
+}
+
+
+
+
+
+
+
+
+
+/*div class="box" 背景の四角↓*/
+.box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #2c2c2f;
+  background: #ffffff;
+}
+
+.box p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+/*MUUNの画像↓*/
+.Muun {
+  width: 100%;
+}
+
+/*PARIYAの画像*/
+.PARIYA {
+  width: 100%;
+}
+
+/*ALLの画像*/
+.ALL {
+  width: 100%;
+}
+
+/*hokapokaの画像*/
+.hokapoka {
+  width: 100%;
+}
+
+/*seukonの画像*/
+.seukon {
+  width: 100%;
+}
+
+/*dotcomの画像*/
+.dotcom {
+  width: 100%;
+}
+
+/*nanaの画像*/
+.nana {
+  width: 100%;
+}
+
+/*JAIMEの画像*/
+.JAIME {
+  width: 100%;
+}
+
+/*フッター↓*/
+footer {
+  background-color: #c8c8c8;
+}
+
+h3 {
+  color: #FFF;
+}
+
+.oya {
+  display: flex;
+}
+
+.kodomo {
+  flex: 1;
+}
+
+.map {
+  width: 95%;
+  height: auto;
+}
+
+.tateoya {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* スマホサイズでハンバーガーメニューを表示 */
+
+@media screen and (max-width: 800px) {
+
+  h1{
+    font-size: 1.7em;
+  }
+  /* チェックボックスを非表示にする */
+  .drawer_hidden {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* メニューのデザイン*/
+  .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul li {
+    margin: 1em auto;
+  }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked~.menu {
+    left: 0;
+    /* メニューを画面に入れる */
+  }
+}
+
+
+/*下の箱*/
+.sita {
+  padding: 0.2em 0.5em;
+  margin: 2em 0;
+  background: #fdddfc;
+  box-shadow: 0px 0px 0px 10px #ffc1fb;
+  border: dashed 2px white;
+}
+
+.sita p {
+  margin: 0;
+  padding: 0;
+}
