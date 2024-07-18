@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+.background{
+    background-image: url(background.png);
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+      }
+
+ * {
+     box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+}
+header {
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    background-color: #76b1ae;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+ }
+
+.logo{height: 5em;
+}
+
+a {	
+    text-decoration: none;
+    color: #ffffff;
+ }
+ nav {
+    margin: 0 0 0 auto;
+ }
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+
+ li {
+    margin: 0 0 0 15px;
+    font-size: 15px;
+ }
+
+.slider{
+    padding-top: 30px;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.slider img{
+    width: 40%;
+    margin:5px ;
+    list-style: none;
+}
+
+h1{
+    color: #4e7270;
+    white-space: nowrap;
+    width: 90%;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom:100px ;
+    font-family: "Playfair Display", serif;
+}
+.p1{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Baskervville SC", serif;
+    color: #453c19;
+}
+h2{
+    font-size: 30px;
+    color: #4e7270;
+    text-align: center;
+    margin: 0 auto;
+    padding-top:4em;
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}
+.cafe{ 
+    height: auto;
+    width: 300px;
+    
+}
+
+
+article{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.name{
+    font-size: 1.5em;
+    padding-top: 5px;
+    color: rgb(62, 61, 61);
+}
+.food img{
+    width: 90%;
+}
+.food{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    width: 90%;
+    background-color: rgba(16, 100, 111, 0.377);
+    margin: 0 auto;
+    margin-bottom: 2em;
+    overflow: hidden;
+    font-size: 18px;
+    }
+
+.値段{
+    padding-bottom: 2em;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.a{
+    margin: 0 auto;
+    margin-top: 1em; 
+    color: #002a39;
+}
+
+
+.etc{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    width: 90%;
+    background-color: rgba(17, 58, 32, 0.377);
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.ppp{
+    padding-top: 1em;
+}
+.map {
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+  }
+  
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+  }
+
+footer{
+    text-align: center;
+    bottom: 0;
+    font-family: "Playfair Display", serif;
+}

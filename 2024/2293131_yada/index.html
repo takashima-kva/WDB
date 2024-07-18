@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>Linarium</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="images/logo_circle.PNG" alt="ロゴ">
+            </div>
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+          
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#my page">My page</a></li>
+                    <li><a href="#look">Look</a></li>
+                    <li><a href="#about">About</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="Look">
+            <h1 >Look</h1>
+            <div class="clothInfo fade-in-right fade-in-right.on"><img src="images/awsu.jpg" alt="AW 定番スーツ"></div>
+            <div>
+                <p class="name">デザインスーツ</p>
+            </div>
+            <p>¥6000</p>
+            <p>素材：綿・ポリエステル</p>
+
+        <div class="clothInfo fade-in-right fade-in-right.on"><img src="images/awwp.jpg" alt="AW ワンピース"></div>
+        <div>
+            <p class="name">チェックミニワンピース</p>
+        </div>
+        <p>¥3500</p>
+        <p>素材：ポリエステル</p>
+
+        <div class="clothInfo fade-in-right fade-in-right.on"><img src="images/awknit.jpg" alt="AW ニット"></div>
+        <div>
+            <p class="name">ショート丈ニット</p>
+        </div>
+            <p>¥4500</p>
+            <p>素材：ポリエステル</p>
+            
+        </section>
+
+        <div>
+            <section id="about">
+            <h1 >About</h1>
+            <p id="font">Linarium</p>
+            <p class="tittle ">かわいいを常にアップグレード唯一無二無自分らしい自分を</p>
+            <p class="detail">わたしだけの特別な場所と感じられる、乙女心をくすぐられるような、華やかでどこか懐かしいブランド</p>
+    
+            </section></div>
+
+    
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(window).scroll(function () {
+            var scrollAnimationElm = document.querySelectorAll('.fade-in-up, .fade-in-right,.fade-in-left,.zoom-in,.classA');
+            var scrollAnimationFunc = function () {
+                for (var i = 0; i < scrollAnimationElm.length; i++) {
+                    var triggerMargin = 150;
+                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                        scrollAnimationElm[i].classList.add('on');
+                    }
+                }
+            }
+            window.addEventListener('load', scrollAnimationFunc);
+            window.addEventListener('scroll', scrollAnimationFunc);
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("a[href^='#']").click(function () {
+                var target = $(this.hash);
+                var position = $(target).offset().top;
+                $('html,body').animate({
+                    scrollTop: position
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+
+<footer>
+    <p>&copy; 2024 2293131 </p>
+</footer>
+
+</body>
+</html>
