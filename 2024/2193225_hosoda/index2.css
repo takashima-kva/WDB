@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+header {
+	/* position: relative; */
+	height:80vh;
+    background: url("images/imagetop.png") center/cover;
+}
+
+.webfont{
+    font-family: "Kaisei Decol", serif;
+}
+
+
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.menu {
+    width: 60%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    background-color: rgb(212, 255, 241);
+    max-width: 900px;
+    margin: 0 auto;
+    /* background-color: rgb(0, 255, 255); */
+}
+
+section {
+    margin: 1rem 0;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* IE用 */
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.ziga {
+    min-height: 20vh;
+    background-color: rgb(183, 221, 235);
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.flex-base {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+.flex-base:nth-of-type(odd){ 
+    /* flex-baseクラスの偶数番目の要素に対して */
+    flex-direction: row-reverse; /* 並び順（行（横方向））を逆にする */
+}
+
+.flex-item {
+    flex: 1;
+    padding: 1rem;
+}
+
+.flex-item img { 
+    max-width: 100%; /*オリジナルの画像サイズがflexより優先されるのを防ぐ */
+}
+
+/* 下から上へフェードイン */
+
+.fade-in-up {
+    /* width: 700px;
+    height: 400px; */
+    transition: 2.2s ease-in-out;
+    translate: 0 50px;
+    opacity: 0;
+}
+
+.fade-in-up.on { 
+    translate: 0;
+    opacity: 1.0;
+}
+
+
+/* 左から右へフェードイン */
+.fade-in-right {
+   
+    transition: 1.2s ease-in-out;
+    translate: -100px 0;
+    opacity: 0;
+}
+.fade-in-right.on { 
+    translate: 0;
+    opacity: 1.0;
+}
+
+.fade-in-left {
+   
+    transition: 1.2s ease-in-out;
+    translate: 100px 0;
+    opacity: 0;
+}
+.fade-in-left.on { 
+    translate: 0;
+    opacity: 1.0;
+}
+
+/* .zoom-in{
+    transition: 1.2s ease-in-out;
+    opacity: 0;
+    transition: 1s;
+}
+
+.zoom-in-on{
+    visibility: visible;
+    opacity: 1.0;
+} */
+
+.zoom-in {
+    transition: 3.2s ease-in-out;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.zoom-in.on { 
+    transform: scale(1);
+    opacity: 1.0;
+}
+
+/* .iroiro-in{
+    transition: 6.2s ease-in-out;
+    translate: -200px 0;
+    opacity: 0;
+}
+.iroiro-in.on { 
+    translate: 0;
+    opacity: 1.0;
+} */
+
+.iroiro-in{
+    transition: 3.2s ease-in-out;
+    transform: scale(2.5);
+    opacity: 0;
+}
+.iroiro-in.on { 
+    transform: scale(1);
+    opacity: 1.0;
+}
+
+/* .classA {
+    transition: 0.5s ease-in-out;
+    translate: 100px -100px;
+    scale: 0.1;
+    rotate: 540deg;
+    opacity: 0;
+}
+
+
+.classA.on {
+    translate: 0;
+    scale: 1;
+    rotate: 0deg;
+    opacity: 1;
+} */
+
+.link{
+    color: crimson;
+}
+
+footer{
+    text-align: center;
+}
