@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.pulldownMenu{
+	margin: 0;
+	padding:0;
+}
+.pulldownMenu li {
+	float: left;
+	background-color: #FFC;
+	width: 250px;
+	list-style-type: none;
+	border: solid 1px;
+	padding: 0px 5px;
+}
+.pulldownMenu li ul{
+	display: none;
+	margin-left : -6px;
+	padding:0;
+}
+.pulldownMenu li ul li{
+	background-color: #CFF;
+}
