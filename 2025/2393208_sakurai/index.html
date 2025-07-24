@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最終課題</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title">Landscape Photography</div>
+    <nav>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#top">Top</a></li>
+        <li class="menu-item"><a href="#photo">Photo</a></li>
+      </ul>
+    </nav> 
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll('.case__item__img');
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target); // 一度だけ動作させたいとき
+          }
+        });
+      }, {
+        threshold: 0.2  // 20%見えたら反応
+      });
+  
+      images.forEach(img => {
+        observer.observe(img);
+      });
+    });
+  </script>
+
+  <main>
+    <section class="about" id="top">
+      <p>Landscape Photography は、木をテーマにしたフォトギャラリーサイトです。</p>
+      <p>長瀞や高尾山、蔵王など、四季折々の風景を写真で紹介しています。</p>
+      <p>「空気感」や「色彩」を、写真とともにお楽しみください。</p>
+    </section>
+
+    <section class="case" id="photo">
+      <article class="case__list">
+        <div class="case__item">
+          <img class="case__item__img"src="image/nagatoro.jpeg" alt="長瀞">
+          <div class="case__item__text">
+            <p>撮影時期：2024年9月<br>場所：月の石もみじ公園（埼玉）</p>
+            <a href="https://chocotabi-saitama.jp/spot/19031/"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>        
+        </div>
+        <div class="case__item">
+          <img class="case__item__img" src="image/yama.jpeg" alt="高尾山">
+          <div class="case__item__text">
+            <p>撮影時期：2024年11月<br>場所：高尾山（東京）</p>
+            <a href="https://www.takaotozan.co.jp/"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>  
+        </div>
+        <div class="case__item">
+          <img class="case__item__img" src="image/osinohakkai.jpeg" alt="忍野八海">
+          <div class="case__item__text">
+            <p>撮影時期：2025年2月<br>場所：忍野八海（山梨）</p>
+            <a href="https://oshino-navi.com/"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>
+        </div>
+        <div class="case__item">
+          <img class="case__item__img" src="image/hukuurajima.jpeg" alt="福浦島">
+          <div class="case__item__text">
+            <p>撮影時期：2025年3月<br>場所：福浦島（宮城）</p>
+            <a href="https://www.matsushima-kanko.com/miru/detail.php?id=176"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>
+        </div>
+        <div class="case__item">
+          <img class="case__item__img" src="image/zaou.jpeg" alt="蔵王">
+          <div class="case__item__text">
+            <p>撮影時期：2025年3月<br>場所：蔵王（宮城）</p>
+            <a href="https://www.zao-machi.com/"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>
+        </div>
+        <div class="case__item">
+          <img class="case__item__img" src="image/ziburi.jpeg" alt="ジブリパーク">
+          <div class="case__item__text">
+            <p>撮影時期：2025年6月<br>場所：ジブリパーク（愛知）</p>
+            <a href="https://ghibli-park.jp/"target="_blank"class="case__item__link"><公式ホームページ></a>
+          </div>
+        </div>
+        <div class="case__item">
+         <img class="case__item__img" src="image/kouen.jpeg" alt="相模原北公園">
+          <div class="case__item__text">
+            <p>撮影時期：2025年7月<br>場所：相模原北公園（神奈川）</p>
+            <a href="https://www.pref.kanagawa.jp/docs/u5r/cnt/f550/tabi-156.html"target="_blank"class="case__item__link"><公式ホームページ></a> 
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Landscape Photography</p>
+  </footer>
+</body>
+</html>
