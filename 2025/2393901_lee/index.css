@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+html{
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: rgb(192, 209, 192);
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: rgb(192, 209, 192);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.menu {
+  width: 100%;
+  top: 0;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+.menu ul {
+   display: flex;
+}
+.menu ul li {
+   flex: 1;
+}
+
+.menu ul li a {
+    color: gray;
+    display: block;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    border-left: 0.1em gray solid
+}
+.menu ul {
+    border-right: 0.1em gray solid
+}
+
+.logo{
+  max-height: 5rem;
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-btn span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 2px 0;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.information {
+  width: 70%;
+  margin: 20px auto 0px;
+  line-height: 160%;
+  text-align: center;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* 画面幅600px以下でのレスポンシブ対応 */
+@media (max-width: 600px) {
+  .information {
+    width: 80%;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    opacity: 0.9;
+    transition: 0.3s;
+    padding-top: /*60px*/ 20vh;
+    z-index: 99;
+  }
+/* メニューが開いた状態*/
+  .menu.open {
+    right: 0;
+    background-color: rgb(192, 209, 192);
+  }
+
+/* メニューリストを縦並びに*/
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+
+/* メニュー項目のスタイル*/
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  .menu ul li a {
+    color: black;
+    border: none;
+  }
+
+/* メニューボタンをflex表示に*/
+  .menu-btn {
+    display: flex;
+  }
+
+/* メニューボタンが開いた時のアニメーション(1本目のバー) */
+  .menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+/* メニューボタンが開いた時のアニメーション(2本目のバーを消す) */
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+/* メニューボタンが開いた時のアニメーション(3本目のバー) */
+  .menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

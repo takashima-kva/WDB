@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぱんだふるらいふ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+        <img class="logo" src="image/pandafullife_logo.png" alt="pandafullife-logo">
+        </a>
+
+        <button class="menu-btn" aria-label="open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    
+        <nav class="menu">
+            <ul>
+            <li><a href="aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="quiz.html">クイズ</a></li>
+            <li><a href="contact.html">連絡</a></li>
+            </ul>
+        </nav>
+
+  <style>
+    .quiz-container {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+
+    .option {
+      display: block;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      transition: background 0.2s;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+
+    .option:hover {
+      background-color: #eee;
+    }
+
+    .option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+      color: #155724;
+      pointer-events: none;
+    }
+
+    .option.wrong {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+      color: #721c24;
+    }
+
+    .feedback {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+  /* スライドからコピペしてくる */
+  /* メニューを画面外に隠し、開いたときにスライドイン */
+
+  .quiz-container {
+    width: 80%;
+    }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    opacity: 0.9;
+    transition: 0.3s;
+    padding-top: /*60px*/ 20vh;
+    z-index: 99;
+  }
+/* メニューが開いた状態*/
+  .menu.open {
+    right: 0;
+    background-color: rgb(192, 209, 192);
+  }
+
+/* メニューリストを縦並びに*/
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+
+/* メニュー項目のスタイル*/
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  .menu ul li a {
+    color: black;
+    border: none;
+  }
+
+/* メニューボタンをflex表示に*/
+  .menu-btn {
+    display: flex;
+  }
+
+/* メニューボタンが開いた時のアニメーション(1本目のバー) */
+  .menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+/* メニューボタンが開いた時のアニメーション(2本目のバーを消す) */
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+/* メニューボタンが開いた時のアニメーション(3本目のバー) */
+  .menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>Q. 中国以外の国で生まれたパンダが中国に返還されなければならない理由は？</h2>
+  <div class="option" data-correct="false">京都議定書のため</div>
+  <div class="option" data-correct="true">ワシントン条約のため</div>
+  <div class="option" data-correct="false">パリ協定のため</div>
+
+  <div class="feedback" id="feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <h2>Q. 2021年上野動物園で生まれた双子パンダの名前は？</h2>
+  <div class="option" data-correct="false">シャンシャンとレイレイ</div>
+  <div class="option" data-correct="false">シャオシャオと楓浜</div>
+  <div class="option" data-correct="true">シャオシャオとレイレイ</div>
+
+  <div class="feedback" id="feedback"></div>
+</div>
+
+<div class="quiz-container">
+  <h2>Q. 良浜が生んで育て上げた赤ちゃんパンダは何頭？</h2>
+  <div class="option" data-correct="true">10頭</div>
+  <div class="option" data-correct="false">12頭</div>
+  <div class="option" data-correct="false">9頭</div>
+
+  <div class="feedback" id="feedback"></div>
+</div>
+
+<script>
+  document.querySelectorAll('.quiz-container').forEach(container => {
+    const options = container.querySelectorAll('.option');
+    const feedback = container.querySelector('.feedback');
+    let answered = false;
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        if (answered) return;
+
+        const isCorrect = option.dataset.correct === 'true';
+
+        if (isCorrect) {
+          option.classList.add('correct');
+          feedback.textContent = "🎉 正解です！";
+          answered = true;
+            
+          options.forEach(o => {
+            if (o !== option) o.style.pointerEvents = 'none';
+          });
+
+        } else {
+          option.classList.add('wrong');
+          feedback.textContent = "❌ 不正解です。";
+        }
+      });
+    });
+  });
+</script>
+
+<script src="index.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 ぱんだふるらいふ</p>
+    </footer>
+</body>
+</html>

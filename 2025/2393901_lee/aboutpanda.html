@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぱんだふるらいふ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+        <img class="logo" src="image/pandafullife_logo.png" alt="pandafullife-logo">
+        </a>
+
+        <button class="menu-btn" aria-label="open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    
+        <nav class="menu">
+            <ul>
+            <li><a href="aboutpanda.html">ジャイアントパンダとは</a></li>
+            <li><a href="uenozoo.html">パンダプロフィール</a></li>
+            <li><a href="quiz.html">クイズ</a></li>
+            <li><a href="contact.html">連絡</a></li>
+            </ul>
+        </nav>
+
+    <div class="aboutpanda">
+    <a1><B>ジャイアントパンダとは</B></a1><br>
+    ジャイアントパンダは中国に生息する動物で、絶滅の危機にある種です。<br>
+    中国ではパンダの繁殖をすすめるために、海外にパンダを貸し出しています。<br>
+    また、海外で生まれたパンダは、ワシントン条約（CITES）により、3歳になると中国に戻らなければなりません。<br>
+    日本で生まれたたくさんのパンダたちも、現在は2頭をのぞいて中国で暮らしています。<br>
+    パンダの主食は、竹とタケノコです。<br>
+    竹にはさまざまな種類があり、季節やパンダの好みによって与える品種が変わります。<br>
+    タケノコは中国では一年中食べられますが、日本では主に春から初夏にかけて与えられます。<br>
+    竹のほかに、リンゴやニンジンを必要に応じてあたえることもあり、栄養を補うために「<ruby>窝窝头<rp></rp><rt>wōwōtóu</rt><rp></ruby>」と呼ばれるパンダ用のお団子をあたえることもあります。<br>
+    </div>
+
+<script src="index.js"></script>
+    <footer class="footer">
+        <p>&copy; 2025 ぱんだふるらいふ</p>
+    </footer>
+</body>
+</html>
+
+<style>
+    .aboutpanda {
+        width: 55%;
+        line-height: 160%;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border: 3px dotted;
+        border-left: 7px solid;
+        border-color: #c0d1c0;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+
+    .aboutpanda a1 {
+        font-size: 1.3em;
+    }
+
+@media (max-width: 600px) {
+    .aboutpanda {
+        width: 90%
+    }
+
+      .menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    height: 100vh;
+    opacity: 0.9;
+    transition: 0.3s;
+    padding-top: /*60px*/ 20vh;
+    z-index: 99;
+  }
+/* メニューが開いた状態*/
+  .menu.open {
+    right: 0;
+    background-color: rgb(192, 209, 192);
+  }
+
+/* メニューリストを縦並びに*/
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+
+/* メニュー項目のスタイル*/
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  .menu ul li a {
+    color: black;
+    border: none;
+  }
+
+/* メニューボタンをflex表示に*/
+  .menu-btn {
+    display: flex;
+  }
+
+/* メニューボタンが開いた時のアニメーション(1本目のバー) */
+  .menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+/* メニューボタンが開いた時のアニメーション(2本目のバーを消す) */
+  .menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+/* メニューボタンが開いた時のアニメーション(3本目のバー) */
+  .menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+</style>
