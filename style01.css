@@ -36,12 +36,19 @@
 .content {
     flex: 1;
     padding: 1em;
+    text-align: center;
 }
 
 .content img {
     width: 100%;
     border-radius: 1em;
 }
+
+
+.content:only-child img {
+    width: 50%;
+}
+
 
 .content a {
     text-decoration: none;
@@ -67,6 +74,10 @@ footer {
 
     .flexbase {
         flex-direction: column;
+    }
+
+    .content:only-child img {
+        width: 100%;
     }
 
     .title {
